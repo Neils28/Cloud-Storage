@@ -1,0 +1,82 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.controlsContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.imagesContainer img {
+  width: 200px; 
+  height: 150px; 
+  object-fit: cover; 
+  margin: 10px; 
+}
+
+
+.error {
+  color: red;
+  font-size: 1.5em;
+}
+
+.version-buttons button {
+  background-color: gray;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px; /* Adjust the value to control the roundness */
+}
+
+.version-buttons button.selected {
+  background-color: blue; /* Style the selected button */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 1000px) {
+  /* Stack elements vertically on smaller screens */
+  .nameContainer,
+  .controlsContainer,
+  .version-buttons,
+  label,
+  .imagesContainer {
+    margin-bottom: 15px; /* Add some spacing between elements */
+  }
+
+  /* Make the upload buttons full width on smaller screens */
+  .controlsContainer Button {
+    width: 100%;
+  }
+
+  /* Center align the text input in the name container */
+  .nameContainer input[type="text"] {
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+  }
+
+  /* Adjust the styling of the version buttons */
+  .version-buttons button {
+    margin-right: 10px; /* Add some spacing between buttons */
+  }
+
+  /* Make images responsive */
+  .imagesContainer img {
+    max-width: 100%; /* Ensure images don't overflow their containers */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+}
